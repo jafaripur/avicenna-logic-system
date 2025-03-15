@@ -14,11 +14,13 @@ This project is a comprehensive system for parsing and evaluating propositional 
 - `Tokenizer`: Converts logical expressions into standardized tokens.
 - `Parser`: Builds an Abstract Syntax Tree (AST) using the Shunting Yard algorithm.
 - `Evaluator`: Evaluates expressions dynamically based on a provided context.
-- `Truth Table Generation`: Automatically generates truth tables for any propositional formula. Supports complex expressions with nested operators. Identifies tautologies, contradictions, and contingencies
-- `Lemmon-Style Natural Deduction`: Implements a Fitch-style natural deduction system. Supports step-by-step proof construction and Validates rule applications (MP, MT, HS, etc.)
-- `Extensible` Design: Easy to add new operators or modify existing ones.
-- `Support` for Nested Expressions: Handles complex, deeply nested logical formulas.
-
+- `Detect rule`: Detect replacement rules and inference rules.
+- `Truth Table Generation`: Automatically generates truth tables for any propositional formula. Supports complex expressions with nested operators. Identifies tautologies, contradictions, and contingencies.
+- `Lemmon-Style Natural Deduction`: Implements a Fitch-style natural deduction system. Supports step-by-step proof construction and validates rule applications (MP, MT, HS, etc.).
+- `Extensible Design`: Easy to add new operators or modify existing ones.
+- `Support for Nested Expressions`: Handles complex, deeply nested logical formulas.
+- `Replacement rules`: Distributive, Commutative, Associativity, Exportation, DoubleNegation, DeMorgan, Contraposition, MaterialImplication, BiconditionalExchange, Tautology.
+- `Inference rules`: Conditional Proof(CPA), Reductio ad Absurdum (RAA), NegIntro, Modus Ponens (MP), Modus Tollens (MT), Modus Ponendo Tollens (MPT), Hypothetical Syllogism (HS), Disjunctive Syllogism (DS), Constructive Dilemma (CD), Destructive Dilemma (DD), Conjunction Introduction (∧I), Conjunction Elimination (∧E), Disjunction Introduction (∨I), Disjunction Elimination (∨E), Absorption (Abs).
 This system is ideal for educational purposes, logical analysis, or as a foundation for more advanced logical systems. It is implemented in PHP and follows an object-oriented design for clarity and maintainability.
 
 ## Installation
@@ -151,7 +153,7 @@ $deduct = "
     [7] (7) r                    [Assume]
     [1,7] (8) p ∧ r              [2, 7, ∧I]
     [1,7] (9) (p ∧ q) ∨ (p ∧ r)  [8, ∨I]
-    [1] (10) (p∧q) ∨ (p ∧ r)   [3, 4, 6, 7, 9, ∨e]
+    [1] (10) (p∧q) ∨ (p ∧ r)     [3, 4, 6, 7, 9, ∨e]
 ";
 $proofs = Lemmon::parseInput($deduct, LogicParser::PROPOSITIONAL);
 
@@ -173,26 +175,26 @@ We welcome contributions to the Avicenna Logic System! Here's how you can help:
 
 1.  **Fork the Repository:** Start by forking the repository to your own GitHub account.
 2.  **Clone Your Fork:** Clone your forked repository to your local machine:
-    ```bash
-    git clone [git@github.com:jafaripur/avicenna-logic-system.git](https://www.google.com/search?q=git@github.com:jafaripur/avicenna-logic-system.git)
-    cd your-forked-repo
-    ```
+```bash
+git clone git@github.com:jafaripur/avicenna-logic-system.git -b dev avicenna-logic
+cd avicenna-logic
+```
 3.  **Create a Branch:** Create a new branch for your feature or bug fix:
-    ```bash
-    git checkout -b feature/your-feature-name dev
-    # or
-    git checkout -b fix/issue-number-or-description dev
-    ```
+```bash
+git checkout -b feature/your-feature-name dev
+# or
+git checkout -b fix/issue-number-or-description dev
+```
 4.  **Make Your Changes:** Implement your feature or bug fix.
 5.  **Commit Your Changes:** Commit your changes with clear and descriptive commit messages:
-    ```bash
-    git add .
-    git commit -m "Add your feature or fix description"
-    ```
+```bash
+git add .
+git commit -m "Add your feature or fix description"
+```
 6.  **Push Your Changes:** Push your branch to your forked repository:
-    ```bash
-    git push origin feature/your-feature-name
-    ```
+```bash
+git push origin feature/your-feature-name
+```
 
 ### Submitting a Pull Request
 
