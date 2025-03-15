@@ -264,9 +264,6 @@ final class Proof
     /**
      * Converts a LogicalExpression AST into a standardized string representation.
      *
-     * This method first obtains a raw string representation from the AST and then
-     * formats the spacing of the resulting expression.
-     *
      * @param LogicalExpression $expr the AST node representing a proposition
      *
      * @return string a standardized, human-readable string representation of the proposition

@@ -182,15 +182,15 @@ final class PropositionalParser extends LogicParser
             $opAssoc = self::ASSOCIATIVITY[$top] ?? 'left';
 
             if (
-                ('left' === $opAssoc && $opPrec >= $tokenPrec)
-                || ('right' === $opAssoc && $opPrec > $tokenPrec)
+                ('left' === $opAssoc && $tokenPrec <= $opPrec)
+                || ('right' === $opAssoc && $tokenPrec < $opPrec)
             ) {
                 $output[] = array_pop($operatorStack);
             } else {
                 break;
             }
         }
-        array_push($operatorStack, $token);
+        $operatorStack[] = $token;
     }
 
     /**

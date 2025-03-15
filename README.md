@@ -51,7 +51,6 @@ composer install --dev
 
 This command will download and install all the necessary libraries specified in the `composer.json` file.
 
-
 ## Running Tests with PHPUnit
 
 This project uses PHPUnit for automated testing. To run the tests, follow these steps:
@@ -70,7 +69,7 @@ If PHPUnit is not found, you can install it globally or as a project dependency 
 ./vendor/bin/phpunit
 ```
 
-1.  `View the Results:` PHPUnit will display the test results in your terminal, showing the number of tests run, assertions made, and any failures or errors encountered.
+3.  `View the Results:` PHPUnit will display the test results in your terminal, showing the number of tests run, assertions made, and any failures or errors encountered.
 
 ```bash
 PHPUnit 12.0.7 by Sebastian Bergmann and contributors.
@@ -155,7 +154,6 @@ $result = TruthTableAnalyzer::analyze($input);
 
 // Print in Lemmon style
 Lemmon::getOutput($input);
-
 ```
 
 ### Lemmon-Style Proof
