@@ -43,7 +43,7 @@ final class PropositionalParser extends LogicParser
         (?:→|->|IMP)          |          # IMPLIES
         (?:¬|~|!|NOT)         |          # NOT
         (?:↔|≡|<->|EQ)        |          # EQUIVALENCE|Biconditional
-        (?:⊕|⊻|XOR)           |          # XOR (Add this line)
+        (?:⊕|⊻|XOR)           |          # XOR|Exclusive Disjuction
         ([\p{L}\p{N}_]+)      |          # Variables (including letters, numbers, and underscores)
         ([()])                           # Parentheses
     /ux';
