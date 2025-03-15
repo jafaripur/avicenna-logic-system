@@ -2,13 +2,13 @@ name: CI
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', 'dev']
     path:
       - .github/**
       - src/**
       - tests/**
   pull_request:
-    branches: ['master']
+    branches: ['master', 'dev']
     path:
       - .github/**
       - src/**
