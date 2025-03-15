@@ -43,17 +43,22 @@ final class ArgumentsParserResult
         // The conclusion is assigned a line number one more than the number of premises.
         $line = count($premises) + 1;
 
+        $refrences = [];
+        for ($i = 1; $i <= count($premises); ++$i) {
+            $refrences[] = $i;
+        }
+
         // Create a new Proof object for the conclusion.
         // Here, the conclusion's references array contains its own line number.
-        $this->conclusion = new Proof($line, $conclusion, [$line], null, null, null, []);
+        $this->conclusion = new Proof($line, $conclusion, $refrences, null, null, null, []);
 
         // Iterate over each premise to create corresponding Proof objects.
         foreach ($premises as $key => $premise) {
             if (empty($premise)) {
-                $this->premises[] = new Proof(1, '', [1], null, null, null, ['Assume']);
+                $this->premises[] = new Proof(1, '', [1], null, null, 'Assume', ['Assume']);
             } else {
                 $line = $key + 1;
-                $this->premises[] = new Proof($line, $premise, [$line], null, null, null, ['Premise']);
+                $this->premises[] = new Proof($line, $premise, [$line], null, null, 'Premise', ['Premise']);
             }
         }
     }

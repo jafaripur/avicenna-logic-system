@@ -36,7 +36,8 @@ final class TruthTablePrinter
 
         // Build headers: combine atomic variable names (uppercase) and sub-expression strings.
         $headers = array_merge(
-            array_map('strtoupper', $result->variables),
+            // array_map('strtoupper', $result->variables),
+            $result->variables,
             array_values($result->expressionMap)
         );
 

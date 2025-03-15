@@ -33,6 +33,8 @@ final class ArgumentsParser
 
         // Split the argument by the turnstile symbol (⊢) to separate premises and conclusion.
         // Using explode ensures that only one occurrence of '⊢' splits the string.
+
+        $argument = str_replace('∴', '⊢', $argument);
         $parts = explode('⊢', $argument);
 
         // Check if the argument splits into exactly two parts.
