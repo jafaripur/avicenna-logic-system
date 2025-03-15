@@ -87,6 +87,24 @@ OK (11 tests, 39 assertions)
 
 ## Usage Examples
 
+### Evaluate Argument
+
+Evaluates the proposition against the provided context.
+
+```php
+$input = "(p ∧ ¬(q → (r ↔ s))) → t";
+$parser = LogicParser::parseFormula($input, LogicParser::PROPOSITIONAL);
+
+$context = [
+    'p' => true,
+    'q' => false,
+    'r' => true,
+    's' => false,
+    't' => true
+];
+$result = $parser->evaluate($context); // true
+```
+
 ### Truth Table Generation
 
 ```php
