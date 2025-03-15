@@ -415,6 +415,7 @@ final class Proof
             LogicalExpression::isNegation($expr) => LogicalExpression::OPERATOR_NEGATION.static::rawExpressionToString($expr->proposition),
             LogicalExpression::isAnd($expr) => '('.static::rawExpressionToString($expr->left).LogicalExpression::OPERATOR_CONJUNCTION.static::rawExpressionToString($expr->right).')',
             LogicalExpression::isOr($expr) => '('.static::rawExpressionToString($expr->left).LogicalExpression::OPERATOR_DISJUNCTION.static::rawExpressionToString($expr->right).')',
+            LogicalExpression::isXor($expr) => '('.static::rawExpressionToString($expr->left).LogicalExpression::OPERATOR_XOR.static::rawExpressionToString($expr->right).')',
             LogicalExpression::isImplication($expr) => '('.static::rawExpressionToString($expr->left).LogicalExpression::OPERATOR_IMPLICATION.static::rawExpressionToString($expr->right).')',
             LogicalExpression::isBiconditional($expr) => '('.static::rawExpressionToString($expr->left).LogicalExpression::OPERATOR_BICONDITIONAL.static::rawExpressionToString($expr->right).')',
             default => '?'

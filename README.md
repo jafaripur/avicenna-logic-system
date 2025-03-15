@@ -8,7 +8,7 @@
 
 A powerful tool for analyzing logical proofs and generating truth tables with propositional logic support and evaluator system.
 
-This project is a comprehensive system for parsing and evaluating propositional logic expressions. It provides tools to tokenize, parse, and evaluate logical formulas, supporting standard logical operators such as AND (`∧`), OR (`∨`), NOT (`¬`), IMPLICATION (`→`), and BICONDITIONAL (`↔`). The system is designed to handle complex nested expressions and can evaluate them against a given context (a mapping of variables to boolean values).
+This project is a comprehensive system for parsing and evaluating propositional logic expressions. It provides tools to tokenize, parse, and evaluate logical formulas, supporting standard logical operators such as AND (`∧`), OR (`∨`), EXCLUSIVE DISJUCTION (`⊕`), NOT (`¬`), IMPLICATION (`→`), and BICONDITIONAL (`↔`). The system is designed to handle complex nested expressions and can evaluate them against a given context (a mapping of variables to boolean values).
 
 ## Key Features:
 - `Tokenizer`: Converts logical expressions into standardized tokens.

@@ -19,6 +19,7 @@ abstract class LogicalExpression
     public const OPERATOR_DISJUNCTION = '∨';
     public const OPERATOR_NEGATION = '¬';
     public const OPERATOR_BICONDITIONAL = '↔';
+    public const OPERATOR_XOR = '⊕';
 
     /**
      * Evaluates the proposition against the provided context.
@@ -75,6 +76,18 @@ abstract class LogicalExpression
     public static function isOr(mixed $prop): bool
     {
         return $prop instanceof OrExpression;
+    }
+
+    /**
+     * Checks if the given proposition is an "Xor" (exclusive disjunction) proposition.
+     *
+     * @param mixed $prop the value to check
+     *
+     * @return bool returns true if $prop is an instance of XorExpression, otherwise false
+     */
+    public static function isXor(mixed $prop): bool
+    {
+        return $prop instanceof XorExpression;
     }
 
     /**

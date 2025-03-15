@@ -14,6 +14,7 @@ use Avicenna\Proposition\Expressions\LogicalExpression;
 use Avicenna\Proposition\Expressions\Negation;
 use Avicenna\Proposition\Expressions\OrExpression;
 use Avicenna\Proposition\Expressions\Variable;
+use Avicenna\Proposition\Expressions\XorExpression;
 
 /**
  * Final class PropositionalParser.
@@ -32,6 +33,7 @@ final class PropositionalParser extends LogicParser
      * - IMPLIES operators (e.g., →, ->, IMP)
      * - NOT operators (e.g., ¬, ~, !, NOT)
      * - EQUIVALENCE operators (e.g., ↔, ≡, <->, EQ)
+     * - XOR operators (e.g., ⊕, ⊻, XOR)
      * - Variables (letters, numbers, underscores)
      * - Parentheses.
      */
@@ -41,6 +43,7 @@ final class PropositionalParser extends LogicParser
         (?:→|->|IMP)          |          # IMPLIES
         (?:¬|~|!|NOT)         |          # NOT
         (?:↔|≡|<->|EQ)        |          # EQUIVALENCE|Biconditional
+        (?:⊕|⊻|XOR)           |          # XOR (Add this line)
         ([\p{L}\p{N}_]+)      |          # Variables (including letters, numbers, and underscores)
         ([()])                           # Parentheses
     /ux';
@@ -53,6 +56,7 @@ final class PropositionalParser extends LogicParser
         LogicalExpression::OPERATOR_NEGATION => 5,
         LogicalExpression::OPERATOR_CONJUNCTION => 4,
         LogicalExpression::OPERATOR_DISJUNCTION => 3,
+        LogicalExpression::OPERATOR_XOR => 3,
         LogicalExpression::OPERATOR_IMPLICATION => 2,
         LogicalExpression::OPERATOR_BICONDITIONAL => 1,
     ];
@@ -65,6 +69,7 @@ final class PropositionalParser extends LogicParser
         LogicalExpression::OPERATOR_NEGATION => 'right',
         LogicalExpression::OPERATOR_CONJUNCTION => 'left',
         LogicalExpression::OPERATOR_DISJUNCTION => 'left',
+        LogicalExpression::OPERATOR_XOR => 'left',
         LogicalExpression::OPERATOR_IMPLICATION => 'right',
         LogicalExpression::OPERATOR_BICONDITIONAL => 'left',
     ];
@@ -236,6 +241,10 @@ final class PropositionalParser extends LogicParser
                             break;
 
                         case LogicalExpression::OPERATOR_DISJUNCTION: array_push($stack, new OrExpression($left, $right));
+
+                            break;
+
+                        case LogicalExpression::OPERATOR_XOR: array_push($stack, new XorExpression($left, $right));
 
                             break;
 
