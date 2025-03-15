@@ -1,0 +1,8 @@
+/vendor
+/.phplint.cache
+/.php-cs-fixer.cache
+/.phpunit.cache
+/doc-cache
+/docs
+/README_TEST.md
+/debug

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+    configVersion="3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://www.phpdoc.org"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/phpDocumentor/phpDocumentor/master/data/xsd/phpdoc.xsd"
+>
+    <title>Avicenna Logic System</title>
+    <paths>
+        <output>docs</output>
+        <cache>doc-cache</cache>
+    </paths>
+
+    <version number="1.0.0">
+        <folder>latest</folder>
+        <api format="php">
+            <source dsn=".">
+                <path>src</path>
+            </source>
+            <default-package-name>Avicenna</default-package-name>
+            <include-source>true</include-source>
+        </api>
+    </version>
+    
+    <setting name="template.color" value="indigo"/>
+
+</phpdocumentor>
