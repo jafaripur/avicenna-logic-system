@@ -1,8 +1,7 @@
 # Avicenna Logic System
 
-`dev` [![dev](https://github.com/jafaripur/avicenna-logic-system/workflows/test/badge.svg?branch=dev)](https://github.com/jafaripur/avicenna-logic-system/actions)
-
-`master` [![master](https://github.com/jafaripur/avicenna-logic-system/workflows/test/badge.svg?branch=master)](https://github.com/jafaripur/avicenna-logic-system/actions)
+![Dev](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/dev.yml/badge.svg)
+![Master](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/master.yml/badge.svg)
 
 ![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -1,8 +1,8 @@
-name: CI
+name: CI-Master
 
 on:
   push:
-    branches: ['master', 'dev']
+    branches: ['master']
     path:
       - .github/**
       - src/**
@@ -10,7 +10,7 @@ on:
       - composer.lock
       - phpunit.dist.xml
   pull_request:
-    branches: ['master', 'dev']
+    branches: ['master']
     path:
       - .github/**
       - src/**
