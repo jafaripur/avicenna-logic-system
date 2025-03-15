@@ -122,6 +122,7 @@ final class PropositionalParser extends LogicParser
             return match (strtoupper($token)) {
                 'AND', '/\\', '&&', '&' => '∧',
                 'OR', '\\/', '||', '|' => '∨',
+                'XOR', '⊻' => '⊕',
                 'IMP', '->' => '→',
                 'NOT', '~', '!' => '¬',
                 'EQ', '<->', '≡' => '↔',
