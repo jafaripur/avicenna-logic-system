@@ -1,6 +1,18 @@
 name: CI
 
-on: [ push ]
+on:
+  push:
+    branches: ['master']
+    path:
+      - .github/**
+      - src/**
+      - tests/**
+  pull_request:
+    branches: ['master']
+    path:
+      - .github/**
+      - src/**
+      - tests/**
 
 jobs:
   build-test:
