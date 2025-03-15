@@ -1,5 +1,7 @@
 # Avicenna Logic System
 
+![Test](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/test.yml/badge.svg)
+
 ![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
