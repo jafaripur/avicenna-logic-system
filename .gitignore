@@ -6,3 +6,5 @@
 /docs
 /README_TEST.md
 /debug
+phpdoc.xml
+phpunit.xml
