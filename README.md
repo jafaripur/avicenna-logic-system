@@ -246,3 +246,10 @@ git push origin feature/your-feature-name
 ### Thank You!
 
 Thank you for your interest in contributing to the Avicenna Logic System. Your contributions are highly valued!
+
+## References
+
+- An Introduction to New Logic, `Zia Movahed`
+- A symbolic introduction to propositional logic, `Mortaza Hajihosseini`
+- [Open Logic Project](https://openlogicproject.org)
+- [forall x: Calgary, An Introduction to Formal Logic](https://forallx.openlogicproject.org/)
