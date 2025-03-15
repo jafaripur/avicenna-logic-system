@@ -1,10 +1,10 @@
 # Avicenna Logic System
 
-![Dev](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/dev.yml/badge.svg)
-![Master](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/master.yml/badge.svg)
-
 ![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![Dev](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/dev.yml/badge.svg)
+![Master](https://github.com/jafaripur/avicenna-logic-system/actions/workflows/master.yml/badge.svg)
 
 A powerful tool for analyzing logical proofs and generating truth tables with propositional logic support.
 
